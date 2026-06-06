@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Multiplication Table Generator</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Dynamic Multiplication Table</h1>
+            <p>Enter a range between -50 and 50 to generate a custom table.</p>
+        </header>
+
+        <div id="error-container" class="error-box hidden" role="alert"></div>
+
+        <main class="main-content">
+            <section class="form-section">
+                <form id="table-form" novalidate>
+                    <div class="form-group-title">Multiplier Range (Horizontal Header)</div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="min-multiplier">Start Value:</label>
+                            <input type="number" id="min-multiplier" name="min-multiplier" value="1" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="max-multiplier">End Value:</label>
+                            <input type="number" id="max-multiplier" name="max-multiplier" value="5" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group-title">Multiplicand Range (Vertical Header)</div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="min-multiplicand">Start Value:</label>
+                            <input type="number" id="min-multiplicand" name="min-multiplicand" value="5" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="max-multiplicand">End Value:</label>
+                            <input type="number" id="max-multiplicand" name="max-multiplicand" value="8" required>
+                        </div>
+                    </div>
+
+                    <button type="submit" id="submit-btn">Generate Table</button>
+                </form>
+            </section>
+
+            <section class="table-section">
+                <div id="table-wrapper" class="table-wrapper">
+                    <div class="placeholder-text">Fill out the form and click generate to view your table.</div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
